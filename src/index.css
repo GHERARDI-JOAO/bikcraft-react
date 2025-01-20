@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./components/tipografia-cor/tipografia.css";
+@import "./components/tipografia-cor/cores.css";
 
 :root {
   font-family: "Roboto", serif;
@@ -11,6 +13,9 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
 ul,
 p {
   margin: 0px;
@@ -27,7 +32,8 @@ a {
   color: inherit;
 }
 
-img {
+img[src$=".jpg"] {
   max-width: 100%;
   display: block;
+  border-radius: 4px;
 }
