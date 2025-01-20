@@ -5,6 +5,9 @@ import "./inicial.css";
 import Magic from "../../assets/img/bicicletas/magic-home.jpg";
 import Nimbus from "../../assets/img/bicicletas/nimbus-home.jpg";
 import Nebula from "../../assets/img/bicicletas/nebula-home.jpg";
+import Tecnologia from "../../assets/img/fotos/tecnologia.jpg";
+import Eletrica from "../../assets/img/icones/eletrica.svg";
+import Rastreador from "../../assets/img/icones/rastreador.svg";
 
 function Inicial() {
   return (
@@ -59,6 +62,52 @@ function Inicial() {
             </a>
           </li>
         </ul>
+      </article>
+
+      <article className="tecnologia-bg">
+        <div className="tecnologia-container">
+          <div className="tecnologia-conteudo">
+            <span className="font-2-l-b cor-5">Tecnologia Avançada</span>
+            <h2 className="font-1-xxl cor-0">
+              você escolhe as suas cores e componentes
+              <span className="cor-p1">.</span>
+            </h2>
+            <p className="font-2-l cor-5">
+              Cada Bikcraft é única e possui a sua identidade. As medidas serão
+              exatas para o seu corpo e altura, garantindo maior conforto e
+              ergonomia na sua pedalada. Você pode também personalizar
+              completamente as suas cores.
+            </p>
+            <a className="linkzin" href="./bicicletas">
+              Escolha um modelo
+            </a>
+            <div className="tecnologia-vantagens">
+              <div>
+                <img src={Eletrica} alt="" />
+                <h3 className="font-1-m cor-0">Motor Elétrico</h3>
+                <p className="font-2-s cor-5">
+                  Toda Bikcraft é equipada com um motor elétrico que possui
+                  duração de até 120h. A bateria é recarregada com a sua energia
+                  gasta ao pedalar.
+                </p>
+              </div>
+
+              <div>
+                <img src={Rastreador} alt="" />
+                <h3 className="font-1-m cor-0">Rastreador</h3>
+                <p className="font-2-s cor-5">
+                  Sabemos o quão preciosa é a sua Bikcraft, por isso adicionamos
+                  rastreadores e sistemas anti-furto para garantir o seu
+                  sossego.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="tecnologia-imagem">
+            <img src={Tecnologia} alt="" />
+          </div>
+        </div>
       </article>
     </>
   );
