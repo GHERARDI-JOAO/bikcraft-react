@@ -16,6 +16,7 @@ import Lescone from "../../assets/img/parceiros/lescone.svg";
 import Flexbox from "../../assets/img/parceiros/flexblog.svg";
 import Wildbeast from "../../assets/img/parceiros/wildbeast.svg";
 import Surfbot from "../../assets/img/parceiros/surfbot.svg";
+import Depoimento from "../../assets/img/fotos/depoimento.jpg";
 
 function Inicial() {
   return (
@@ -155,6 +156,22 @@ function Inicial() {
             <img src={Surfbot} alt="" />
           </li>
         </ul>
+      </section>
+
+      <section className="depoimento" aria-label="Depoimento">
+        <div>
+          <img src={Depoimento} alt="Pessoa pedalando uma bicicleta Bikcraft" />
+        </div>
+        <div className="depoimento-conteudo">
+          <blockquote className="font-1-xl cor-p5">
+            <p>
+              Pedalar sempre foi a minha paixão, o que o pessoal da Bikcraft fez
+              foi intensificar o meu amor por esta atividade. Recomendo à todos
+              que amo.
+            </p>
+          </blockquote>
+          <span class="font-1-m-b cor-p4">Ana Júlia</span>
+        </div>
       </section>
     </>
   );
