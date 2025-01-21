@@ -8,6 +8,14 @@ import Nebula from "../../assets/img/bicicletas/nebula-home.jpg";
 import Tecnologia from "../../assets/img/fotos/tecnologia.jpg";
 import Eletrica from "../../assets/img/icones/eletrica.svg";
 import Rastreador from "../../assets/img/icones/rastreador.svg";
+import Caravan from "../../assets/img/parceiros/caravan.svg";
+import Ranek from "../../assets/img/parceiros/ranek.svg";
+import Handel from "../../assets/img/parceiros/handel.svg";
+import Dogs from "../../assets/img/parceiros/dogs.svg";
+import Lescone from "../../assets/img/parceiros/lescone.svg";
+import Flexbox from "../../assets/img/parceiros/flexblog.svg";
+import Wildbeast from "../../assets/img/parceiros/wildbeast.svg";
+import Surfbot from "../../assets/img/parceiros/surfbot.svg";
 
 function Inicial() {
   return (
@@ -109,6 +117,45 @@ function Inicial() {
           </div>
         </div>
       </article>
+
+      <section className="parceiros" aria-label="Nossos Parceiros">
+        <h2 className="h2-container font-1-xxl">
+          nossos parceiros <span className="cor-p1">.</span>
+        </h2>
+
+        <ul>
+          <li>
+            <img src={Caravan} alt="" />
+          </li>
+          <li>
+            {" "}
+            <img src={Ranek} alt="" />{" "}
+          </li>
+          <li>
+            {" "}
+            <img src={Handel} alt="" />{" "}
+          </li>
+          <li>
+            <img src={Dogs} alt="" />{" "}
+          </li>
+          <li>
+            {" "}
+            <img src={Lescone} alt="" />{" "}
+          </li>
+          <li>
+            {" "}
+            <img src={Flexbox} alt="" />
+          </li>
+          <li>
+            {" "}
+            <img src={Wildbeast} alt="" />
+          </li>
+          <li>
+            {" "}
+            <img src={Surfbot} alt="" />
+          </li>
+        </ul>
+      </section>
     </>
   );
 }
