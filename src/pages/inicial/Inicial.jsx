@@ -173,6 +173,47 @@ function Inicial() {
           <span class="font-1-m-b cor-p4">Ana Júlia</span>
         </div>
       </section>
+
+      <article className="seguros-bg">
+        <div className="seguros-container">
+          <h2 className="font-1-xxl cor-0">
+            Seguros
+            <span className="cor-p1">.</span>
+          </h2>
+          <div className="seguros-item">
+            <h3 className="font-1-xl cor-6">PRATA</h3>
+            <span className="font-1-xl cor-0">
+              R$ 199 <span className="font-1-xs cor-6">mensal</span>
+            </span>
+            <ul className="font-2-m cor-0">
+              <li>Duas trocas por ano</li>
+              <li>Assistência técnica</li>
+              <li>Suporte 08h às 18h</li>
+              <li>Cobertura estadual</li>
+            </ul>
+            <a className="Button secundario" href="./orcamento">
+              Inscreva-se
+            </a>
+          </div>
+          <div className="seguros-item">
+            <h3 className="font-1-xl cor-p1">OURO</h3>
+            <span className="font-1-xl cor-0">
+              R$ 299 <span className="font-1-xs cor-6">mensal</span>
+            </span>
+            <ul className="font-2-m cor-0">
+              <li>Cinco trocas por ano</li>
+              <li>Assistência especial</li>
+              <li>Suporte 24h</li>
+              <li>Cobertura nacional</li>
+              <li>Desconto em parceiros</li>
+              <li>Acesso ao Clube Bikcraft</li>
+            </ul>
+            <a className="Button" href="./orcamento">
+              Inscreva-se
+            </a>
+          </div>
+        </div>
+      </article>
     </>
   );
 }

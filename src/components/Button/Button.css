@@ -10,12 +10,21 @@
   line-height: 1.33;
   font-family: "Poppins";
   font-weight: 600;
+  max-width: max-content;
 }
 
 .Button:hover {
   background: linear-gradient(#ffb60d, #e59317);
 }
 
+.Button.secundario {
+  background: var(--cor-10);
+  color: var(--cor-2);
+}
+
+.Button.secundario:hover {
+  background: var(--cor-9);
+}
 @media (max-width: 600px) {
   .Button {
     padding: 12px 16px;
