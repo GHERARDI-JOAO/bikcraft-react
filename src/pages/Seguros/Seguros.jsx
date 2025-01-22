@@ -66,7 +66,7 @@ function Seguros() {
           <ul>
             <li>
               <img src={Eletrica} alt="" />
-              <h3>Reparo Elétrico</h3>
+              <h3 className="font-1-l cor-0">Reparo Elétrico</h3>
               <p className="font-2-s cor-5">
                 Garantimos o reparo completo do seu motor em caso de falhas.
                 Sabemos que falhas são raras, mas estamos aqui para caso ocorra.
