@@ -1,6 +1,7 @@
 import React from "react";
 import introducao from "../../assets/img/fotos/introducao.jpg";
 import NavBar from "../../components/NavBar/NavBar";
+import Footer from "../../components/Footer/Footer";
 import "./inicial.css";
 import Magic from "../../assets/img/bicicletas/magic-home.jpg";
 import Nimbus from "../../assets/img/bicicletas/nimbus-home.jpg";
@@ -214,6 +215,8 @@ function Inicial() {
           </div>
         </div>
       </article>
+
+      <Footer />
     </>
   );
 }
