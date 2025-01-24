@@ -13,7 +13,7 @@ import Velocidade from "../../assets/img/icones/velocidade.svg";
 import Rastreador from "../../assets/img/icones/rastreador.svg";
 import Nebula from "../../assets/img/bicicletas/nebula.jpg";
 import Magic from "../../assets/img/bicicletas/magic.jpg";
-
+import Seguro from "../../assets/img/fotos/seguros.jpg";
 import "./Nimbus.css";
 
 function Nimbus() {
@@ -140,6 +140,28 @@ function Nimbus() {
             </a>
           </li>
         </ul>
+      </article>
+
+      <article className="seguro-bg">
+        <div className="seguro-container">
+          <div className="seguro-imagem">
+            <img src={Seguro} alt="pessoa parada em cima de uma bicicleta" />
+          </div>
+          <div className="seguro-conteudo">
+            <h2 className="font-1-xxl cor-0">
+              Pedale mais tranquilo com o nosso{" "}
+              <span className="cor-p1">seguro.</span>
+            </h2>
+            <p className="font-2-l cor-5">
+              Inscreva-se em um dos planos do nosso seguro Bikcraft e aproveite
+              diversos benefícios.
+            </p>
+
+            <Link className="Button" to="/seguros">
+              Conheça Mais
+            </Link>
+          </div>
+        </div>
       </article>
 
       <Footer />
