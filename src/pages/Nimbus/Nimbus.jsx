@@ -11,6 +11,8 @@ import Eletrica from "../../assets/img/icones/eletrica.svg";
 import Carbono from "../../assets/img/icones/carbono.svg";
 import Velocidade from "../../assets/img/icones/velocidade.svg";
 import Rastreador from "../../assets/img/icones/rastreador.svg";
+import Nebula from "../../assets/img/bicicletas/nebula.jpg";
+import Magic from "../../assets/img/bicicletas/magic.jpg";
 
 import "./Nimbus.css";
 
@@ -18,53 +20,53 @@ function Nimbus() {
   return (
     <>
       <NavBar />
-      <main className="">
-        <div className="titulo-bg">
+      <main className="titulo-bg">
+        <div>
           <div className="titulo-container">
-            <p className="font-2-xl cor-5">R$4999</p>
+            <p className="maiusculaP font-2-xl cor-5">R$4999</p>
             <h1 className="font-1-xxl cor-0">
               Nimbus Stark <span className="cor-p1">.</span>
             </h1>
           </div>
         </div>
 
-        <div className="bicicleta">
-          <div className="bicicleta-imagens">
+        <div className="nimbus-container">
+          <div className="nimbus-imagens">
             <img src={Nimbus1} alt="" />
             <img src={Nimbus2} alt="" />
             <img src={Nimbus3} alt="" />
           </div>
 
-          <div className="bicicleta-conteudo">
+          <div className="nimbus-conteudo">
             <p className="font-2-l cor-5">
               A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe.
               Ela vem equipada com os melhores acessórios, o que garante maior
               velocidade.
             </p>
 
-            <div className="bicicleta-comprar">
+            <div className="nimbus-comprar">
               <Link className="Button" to="orcamento">
                 Comprar Agora
               </Link>
-              <span>
+              <span className="font-1-xs cor-6">
                 {" "}
                 <img src={Entrega} alt="" />
                 Entrega em 5 dias
               </span>
 
-              <span>
+              <span className="font-1-xs cor-6">
                 {" "}
                 <img src={Estoque} alt="" />
                 18 em estoque
               </span>
             </div>
             <h2 className="font-1-xs cor-0">Informações</h2>
-            <ul className="bicicleta-informacoes">
+            <ul className="nimbus-informacoes">
               <li>
                 {" "}
                 <img src={Eletrica} alt="" />
                 <h3 className="font-1-m cor-0">Motor Elétrico</h3>
-                <p>
+                <p className="font-2-xs cor-5">
                   Permite você viajar distâncias inimaginaveis com a sua bike.
                 </p>
               </li>
@@ -93,7 +95,7 @@ function Nimbus() {
               </li>
             </ul>
             <h2 className="font-1-xs cor-0">Ficha Técnica</h2>
-            <ul class="bicicleta-ficha font-2-s cor-4">
+            <ul className="nimbus-ficha font-2-s cor-4">
               <li>
                 Peso <span>9 kg</span>
               </li>
@@ -116,6 +118,30 @@ function Nimbus() {
           </div>
         </div>
       </main>
+
+      <article className="nimbus-lista">
+        <h2 className="font-1-xxl">
+          escolha a sua <span className="cor-p1">.</span>
+        </h2>
+
+        <ul>
+          <li>
+            <a href="./bicicletas/magic">
+              <img src={Magic} alt="Bicicleta preta" />
+              <h3 className="font-1-xl">Magic Might</h3>
+              <span className="font-2-m cor-8">R$ 2499</span>
+            </a>
+          </li>
+          <li>
+            <a href="./bicicletas/nebula">
+              <img src={Nebula} alt="Bicicleta preta" />
+              <h3 className="font-1-xl">Nebula Cosmic</h3>
+              <span className="font-2-m cor-8">R$ 3999</span>
+            </a>
+          </li>
+        </ul>
+      </article>
+
       <Footer />
     </>
   );
