@@ -5,6 +5,8 @@ import Termos from "./pages/Termos/Termos";
 import Bicicletas from "./pages/Bicicletas/Bicicletas";
 import Seguros from "./pages/Seguros/Seguros";
 import Nimbus from "./pages/Nimbus/Nimbus";
+import Nebula from "./pages/Nebula/Nebula";
+import Magic from "./pages/Magic/Magic";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/bicicletas" element={<Bicicletas />} />
         <Route path="/seguros" element={<Seguros />} />
         <Route path="/nimbus" element={<Nimbus />} />
+        <Route path="/nebula" element={<Nebula />} />
+        <Route path="/magic" element={<Magic />} />
       </Routes>
     </BrowserRouter>
   );
