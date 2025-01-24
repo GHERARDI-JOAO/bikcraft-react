@@ -4,6 +4,7 @@ import Inicial from "./pages/inicial/Inicial";
 import Termos from "./pages/Termos/Termos";
 import Bicicletas from "./pages/Bicicletas/Bicicletas";
 import Seguros from "./pages/Seguros/Seguros";
+import Nimbus from "./pages/Nimbus/Nimbus";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/termos" element={<Termos />} />
         <Route path="/bicicletas" element={<Bicicletas />} />
         <Route path="/seguros" element={<Seguros />} />
+        <Route path="/nimbus" element={<Nimbus />} />
       </Routes>
     </BrowserRouter>
   );

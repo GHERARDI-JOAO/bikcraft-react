@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import "./Bicicletas.css";
@@ -54,9 +55,9 @@ function Bicicletas() {
                 Rastreador
               </li>
             </ul>
-            <a className="Button seta" href="./nimbus">
+            <Link className="Button seta" to="/nimbus">
               MAIS SOBRE
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -91,9 +92,9 @@ function Bicicletas() {
                   Rastreador
                 </li>
               </ul>
-              <a className="Button seta" href="./magic">
+              <Link className="Button seta" to="/magic">
                 MAIS SOBRE
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -128,9 +129,9 @@ function Bicicletas() {
                 Rastreador
               </li>
             </ul>
-            <a className="Button seta" href="./nebula">
+            <Link className="Button seta" to="/nebula">
               MAIS SOBRE
-            </a>
+            </Link>
           </div>
         </div>
       </main>
