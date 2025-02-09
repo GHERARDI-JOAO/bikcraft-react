@@ -7,7 +7,9 @@ function NavBar() {
   return (
     <header className="header-bg">
       <div className="header">
-        <img src={bikcraft} alt="Bikcraft" />
+        <Link to="/">
+          <img src={bikcraft} alt="Bikcraft" />
+        </Link>
         <nav aria-label="primaria">
           <ul className="header-menu">
             <li>
