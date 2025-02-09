@@ -1,11 +1,10 @@
 import React from "react";
-import introducao from "../../assets/img/fotos/introducao.jpg";
-import { motion } from "framer-motion";
-import { useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import NavBar from "../../components/NavBar/NavBar";
-import { PageTransition } from "../../components/pageTransition/PageTransition";
+import PageTransition from "../../components/pageTransition/PageTransition";
 import Footer from "../../components/Footer/Footer";
 import "./inicial.css";
+import introducao from "../../assets/img/fotos/introducao.jpg";
 import Magic from "../../assets/img/bicicletas/magic-home.jpg";
 import Nimbus from "../../assets/img/bicicletas/nimbus-home.jpg";
 import Nebula from "../../assets/img/bicicletas/nebula-home.jpg";
@@ -23,15 +22,15 @@ import Surfbot from "../../assets/img/parceiros/surfbot.svg";
 import Depoimento from "../../assets/img/fotos/depoimento.jpg";
 
 function Inicial() {
-  // scroll progress for progress bar
   const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
   return (
     <PageTransition>
       <>
         <NavBar />
 
-        {/* Progress bar */}
         <motion.div
           className="progress-bar"
           style={{
@@ -46,9 +45,15 @@ function Inicial() {
             zIndex: 100,
           }}
         />
+
         <main className="introducao-bg">
           <div className="introducao">
-            <div className="introducao-conteudo">
+            <motion.div
+              className="introducao-conteudo"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <h1>
                 Bicicletas feitas sob medida<span>.</span>
               </h1>
@@ -60,36 +65,49 @@ function Inicial() {
               <a className="Button" href="./bicicletas">
                 Escolha a sua
               </a>
-            </div>
-            <div>
-              <img src={introducao} alt="Bicicleta elétrica preta." />
-            </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <motion.img
+                style={{ scale }}
+                src={introducao}
+                alt="Bicicleta elétrica preta."
+              />
+            </motion.div>
           </div>
         </main>
 
         <article className="bicicletas-lista">
-          <h2 className="font-1-xxl">
+          <motion.h2
+            className="font-1-xxl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
             escolha a sua <span className="cor-p1">.</span>
-          </h2>
+          </motion.h2>
 
           <ul>
             <li>
               <a href="./bicicletas/magic">
-                <img src={Magic} alt="Bicicleta preta" />
+                <img src={Magic} alt="Magic Might" />
                 <h3 className="font-1-xl">Magic Might</h3>
                 <span className="font-2-m cor-8">R$ 2499</span>
               </a>
             </li>
             <li>
-              <a href="./bicicletas/magic">
-                <img src={Nimbus} alt="Bicicleta preta" />
+              <a href="./bicicletas/nimbus">
+                <img src={Nimbus} alt="Nimbus Stark" />
                 <h3 className="font-1-xl">Nimbus Stark</h3>
                 <span className="font-2-m cor-8">R$ 4999</span>
               </a>
             </li>
             <li>
-              <a href="./bicicletas/magic">
-                <img src={Nebula} alt="Bicicleta preta" />
+              <a href="./bicicletas/nebula">
+                <img src={Nebula} alt="Nebula Cosmic" />
                 <h3 className="font-1-xl">Nebula Cosmic</h3>
                 <span className="font-2-m cor-8">R$ 3999</span>
               </a>
@@ -99,7 +117,13 @@ function Inicial() {
 
         <article className="tecnologia-bg">
           <div className="tecnologia-container">
-            <div className="tecnologia-conteudo">
+            <motion.div
+              className="tecnologia-conteudo"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <span className="font-2-l-b cor-5">Tecnologia Avançada</span>
               <h2 className="font-1-xxl cor-0">
                 você escolhe as suas cores e componentes
@@ -114,6 +138,7 @@ function Inicial() {
               <a className="linkzin" href="./bicicletas">
                 Escolha um modelo
               </a>
+
               <div className="tecnologia-vantagens">
                 <div>
                   <img src={Eletrica} alt="" />
@@ -124,7 +149,6 @@ function Inicial() {
                     energia gasta ao pedalar.
                   </p>
                 </div>
-
                 <div>
                   <img src={Rastreador} alt="" />
                   <h3 className="font-1-m cor-0">Rastreador</h3>
@@ -135,61 +159,75 @@ function Inicial() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="tecnologia-imagem">
+            <motion.div
+              className="tecnologia-imagem"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
               <img src={Tecnologia} alt="" />
-            </div>
+            </motion.div>
           </div>
         </article>
 
         <section className="parceiros" aria-label="Nossos Parceiros">
-          <h2 className="h2-container font-1-xxl">
+          <motion.h2
+            className="h2-container font-1-xxl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             nossos parceiros <span className="cor-p1">.</span>
-          </h2>
+          </motion.h2>
 
           <ul>
             <li>
-              <img src={Caravan} alt="" />
+              <img src={Caravan} alt="Caravan" />
             </li>
             <li>
-              {" "}
-              <img src={Ranek} alt="" />{" "}
+              <img src={Ranek} alt="Ranek" />
             </li>
             <li>
-              {" "}
-              <img src={Handel} alt="" />{" "}
+              <img src={Handel} alt="Handel" />
             </li>
             <li>
-              <img src={Dogs} alt="" />{" "}
+              <img src={Dogs} alt="Dogs" />
             </li>
             <li>
-              {" "}
-              <img src={Lescone} alt="" />{" "}
+              <img src={Lescone} alt="Lescone" />
             </li>
             <li>
-              {" "}
-              <img src={Flexbox} alt="" />
+              <img src={Flexbox} alt="Flexbox" />
             </li>
             <li>
-              {" "}
-              <img src={Wildbeast} alt="" />
+              <img src={Wildbeast} alt="Wildbeast" />
             </li>
             <li>
-              {" "}
-              <img src={Surfbot} alt="" />
+              <img src={Surfbot} alt="Surfbot" />
             </li>
           </ul>
         </section>
 
         <section className="depoimento" aria-label="Depoimento">
-          <div>
-            <img
-              src={Depoimento}
-              alt="Pessoa pedalando uma bicicleta Bikcraft"
-            />
-          </div>
-          <div className="depoimento-conteudo">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <img src={Depoimento} alt="Pessoa pedalando" />
+          </motion.div>
+          <motion.div
+            className="depoimento-conteudo"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <blockquote className="font-1-xl cor-p5">
               <p>
                 Pedalar sempre foi a minha paixão, o que o pessoal da Bikcraft
@@ -197,16 +235,22 @@ function Inicial() {
                 todos que amo.
               </p>
             </blockquote>
-            <span class="font-1-m-b cor-p4">Ana Júlia</span>
-          </div>
+            <span className="font-1-m-b cor-p4">Ana Júlia</span>
+          </motion.div>
         </section>
 
         <article className="seguros-bg">
           <div className="seguros-container">
-            <h2 className="font-1-xxl cor-0">
-              Seguros
-              <span className="cor-p1">.</span>
-            </h2>
+            <motion.h2
+              className="font-1-xxl cor-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Seguros<span className="cor-p1">.</span>
+            </motion.h2>
+
             <div className="seguros-item">
               <h3 className="font-1-xl cor-6">PRATA</h3>
               <span className="font-1-xl cor-0">
@@ -222,6 +266,7 @@ function Inicial() {
                 Inscreva-se
               </a>
             </div>
+
             <div className="seguros-item">
               <h3 className="font-1-xl cor-p1">OURO</h3>
               <span className="font-1-xl cor-0">
