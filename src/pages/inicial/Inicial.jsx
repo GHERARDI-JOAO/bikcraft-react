@@ -1,5 +1,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import PageTransition from "../../components/pageTransition/PageTransition";
 import Footer from "../../components/Footer/Footer";
@@ -92,25 +93,25 @@ function Inicial() {
 
           <ul>
             <li>
-              <a href="./bicicletas/magic">
+              <Link to="/magic">
                 <img src={Magic} alt="Magic Might" />
                 <h3 className="font-1-xl">Magic Might</h3>
                 <span className="font-2-m cor-8">R$ 2499</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./bicicletas/nimbus">
+              <Link to="/nimbus">
                 <img src={Nimbus} alt="Nimbus Stark" />
                 <h3 className="font-1-xl">Nimbus Stark</h3>
                 <span className="font-2-m cor-8">R$ 4999</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./bicicletas/nebula">
+              <Link to="/nebula">
                 <img src={Nebula} alt="Nebula Cosmic" />
                 <h3 className="font-1-xl">Nebula Cosmic</h3>
                 <span className="font-2-m cor-8">R$ 3999</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </article>
