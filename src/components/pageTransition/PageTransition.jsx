@@ -11,8 +11,8 @@ const PageTransition = ({ children }) => {
         animate={{ scaleX: 0 }}
         exit={{ scaleX: 1 }}
         transition={{
-          duration: 0.55,
-          ease: [0.22, 1, 0.36, 1],
+          duration: 0.8,
+          ease: [0.43, 0.13, 0.23, 0.96], // Custom easing for a smoother feel
         }}
       />
       <div className="page-content">{children}</div>
@@ -23,7 +23,7 @@ const PageTransition = ({ children }) => {
         exit={{ scaleX: 0 }}
         transition={{
           duration: 0.8,
-          ease: [0.22, 1, 0.36, 1],
+          ease: [0.43, 0.13, 0.23, 0.96], // Matching ease for consistency
         }}
       />
     </>
