@@ -11,6 +11,7 @@ import Nimbus from "./pages/Nimbus/Nimbus";
 import Nebula from "./pages/Nebula/Nebula";
 import Magic from "./pages/Magic/Magic";
 import Contato from "./pages/Contato/Contato";
+import Orcamento from "./pages/Orcamento/Orcamento";
 
 // Create a separate component for the routes to use useLocation
 const AnimatedRoutes = () => {
@@ -27,6 +28,7 @@ const AnimatedRoutes = () => {
         <Route path="/nebula" element={<Nebula />} />
         <Route path="/magic" element={<Magic />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/orcamento" element={<Orcamento />} />
       </Routes>
     </AnimatePresence>
   );

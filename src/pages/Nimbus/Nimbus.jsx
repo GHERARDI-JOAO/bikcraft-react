@@ -47,7 +47,7 @@ function Nimbus() {
               </p>
 
               <div className="nimbus-comprar">
-                <Link className="Button" to="orcamento">
+                <Link className="Button" to="/orcamento">
                   Comprar Agora
                 </Link>
                 <span className="font-1-xs cor-6">
