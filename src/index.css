@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "./components/tipografia-cor/tipografia.css";
 @import "./components/tipografia-cor/cores.css";
+@import "./components/formulario/formulario.css";
 @import "./components/BasicComponents/components.css";
 
 :root {
