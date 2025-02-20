@@ -5,6 +5,9 @@ import PageTransition from "../../components/pageTransition/PageTransition";
 import instagramP from "../../assets/img/redes/instagram-p.svg";
 import facebookP from "../../assets/img/redes/facebook-p.svg";
 import youtubeP from "../../assets/img/redes/youtube-p.svg";
+import mapa from "../../assets/img/lojas/rj.jpg";
+import mapaSP from "../../assets/img/lojas/sp.jpg";
+import horario from "../../assets/img/icones/horario.svg";
 import "./Contato.css";
 
 function Contato() {
@@ -38,7 +41,7 @@ function Contato() {
                 <a href="tel:+55219999999">+55 21 9999-9999</a>
               </address>
 
-              <div className="contat-redes">
+              <div className="contato-redes">
                 <a href="./">
                   <img src={instagramP} alt="" />
                 </a>
@@ -73,7 +76,7 @@ function Contato() {
                   />
                 </div>
 
-                <div>
+                <div className="col-2">
                   <label for="email">Email</label>
                   <input
                     type="email"
@@ -83,7 +86,7 @@ function Contato() {
                   />
                 </div>
 
-                <div>
+                <div className="col-2">
                   <label for="mensagem">Mensagem</label>
                   <textarea
                     rows="5"
@@ -93,11 +96,63 @@ function Contato() {
                   />
                 </div>
 
-                <button className="Button">Enviar Mensagem</button>
+                <button className="Button col-2">Enviar Mensagem</button>
               </form>
             </section>
           </div>
         </main>
+
+        <article className="lojas-container">
+          <h2 className="font-1-xxl">
+            lojas locais <span className="cor-p1">.</span>
+          </h2>
+          <div className="lojas-item">
+            <img
+              src={mapa}
+              alt="Mapa marcando o endereço em Rua Ali Perto 25 Rio de Janeiro RJ"
+            />
+            <div className="lojas-conteudo">
+              <h3 className="font-1-xl">Rio de Janeiro</h3>
+              <div className="lojas-dados font-2-s cor-8">
+                <p>Rua Ali Perto, 25</p>
+                <p>Rio de Janeiro</p>
+              </div>
+
+              <div className="lojas-dados font-2-s cor-8">
+                <a href="mailto:rj@bikcraft.com">rj@bikcraft.com</a>
+                <a href="tel:+55219999999">+55 21 9999-9999</a>
+              </div>
+              <p className="lojas-tempo font-1-s">
+                {" "}
+                <img src={horario} alt="" /> 08-18h de seg à dom
+              </p>
+            </div>
+          </div>
+
+          <div className="lojas-item">
+            <img
+              src={mapaSP}
+              alt="Mapa marcando o endereço em Rua Ali Perto 25 São Paulo - SP"
+            />
+            <div className="lojas-conteudo">
+              <h3 className="font-1-xl">São Paulo</h3>
+              <div className="lojas-dados font-2-s cor8">
+                <p>Rua Ali Perto, 25</p>
+                <p>São Paulo</p>
+              </div>
+
+              <div className="lojas-dados font-2-s cor-8">
+                <a href="mailto:sp@bikcraft.com">sp@bikcraft.com</a>
+                <a href="tel:+55119999999">+55 11 9999-9999</a>
+              </div>
+              <p className="lojas-tempo font-1-s">
+                {" "}
+                <img src={horario} alt="" /> 08-18h de seg à dom
+              </p>
+            </div>
+          </div>
+        </article>
+
         <Footer />
       </>
     </PageTransition>
