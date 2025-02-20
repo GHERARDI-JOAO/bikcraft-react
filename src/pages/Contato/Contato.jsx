@@ -15,7 +15,7 @@ function Contato() {
     <PageTransition>
       <>
         <NavBar />
-        <main className="">
+        <main className="contatin">
           <div className="titulo-bg">
             <div className="titulo-container">
               <p className="font-2-l-b cor-5">Respostas em até 24h</p>
