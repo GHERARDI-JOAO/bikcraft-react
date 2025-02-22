@@ -24,7 +24,7 @@
   color: var(--cor-2);
 }
 
-.Button.seta::after {
+.Button.setaa::after {
   content: "";
   display: inline-block;
   width: 18px;
@@ -34,12 +34,12 @@
   transition: transform 0.3s;
 }
 
-.Button.seta {
+.Button.setaa {
   display: flex;
   align-items: center;
 }
 
-.Button.seta:hover::after {
+.Button.setaa:hover::after {
   transform: translateX(4px);
 }
 .Button.secundario:hover {

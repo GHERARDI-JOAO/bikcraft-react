@@ -1,9 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import bikcraft from "../../assets/img/bikcraft.svg";
 import "./NavBar.css";
 
 function NavBar() {
+  const location = useLocation();
+  const ativarLink = (path) => {
+    return location.pathname.includes(path);
+  };
+
   return (
     <header className="header-bg">
       <div className="header">

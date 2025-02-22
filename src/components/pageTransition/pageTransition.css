@@ -9,6 +9,9 @@
   pointer-events: none;
   will-change: transform;
   backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-in {

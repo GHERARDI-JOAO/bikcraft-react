@@ -51,9 +51,9 @@ function Inicial() {
           <div className="introducao">
             <motion.div
               className="introducao-conteudo"
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ delay: 0.4 }}
             >
               <h1>
                 Bicicletas feitas sob medida<span>.</span>

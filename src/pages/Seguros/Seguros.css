@@ -62,47 +62,37 @@
 }
 
 .perguntas dl > div {
-  padding: 20px;
+  overflow: hidden;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 
-.perguntas dl > div:nth-child(odd) {
+.pergunta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pergunta-header:hover {
   background-color: var(--cor-1);
 }
 
-.perguntas dt {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-}
-
-.perguntas dt::before {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 8px;
-  background-color: var(--cor-p1);
-}
-
-.perguntas dt::after {
-  content: "";
-  display: inline-block;
+.seta {
   width: 14px;
   height: 6px;
-  background: url(../../assets/img/icones/seta-abrir.svg);
-  transition: 0.3s;
-}
-
-.perguntas dt:hover::after {
-  transform: rotate(180deg);
+  background: url(../../assets/img/icones/seta-abrir.svg) no-repeat center
+    center;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .perguntas dd {
-  padding-left: 20px;
-  padding-top: 16px;
-  max-width: 80ch;
+  padding: 0 20px 20px 20px;
 }
 
 @media (max-width: 800px) {
@@ -126,5 +116,129 @@
 
   .perguntas h2 {
     margin-bottom: 40px;
+  }
+
+  .seguros-containerPAGE {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+
+  .seguros-item {
+    padding: 32px;
+  }
+
+  .vantagens-container ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+  }
+
+  .pergunta-header {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .seguros-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .seguros-item span {
+    justify-self: center;
+    margin-bottom: 20px;
+  }
+
+  .seguros-item ul {
+    margin-bottom: 20px;
+  }
+
+  .vantagens-container ul {
+    grid-template-columns: 1fr;
+  }
+
+  .vantagens-container li {
+    text-align: center;
+  }
+
+  .vantagens-container img {
+    margin: 0 auto 10px;
+  }
+
+  .perguntas dl > div {
+    margin-bottom: 15px;
+  }
+
+  .pergunta-header {
+    align-items: flex-start;
+  }
+
+  .pergunta-header span {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-container h1 {
+    font-size: 2rem;
+  }
+
+  .seguros-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .seguros-item span {
+    font-size: 1.75rem;
+  }
+
+  .vantagens-container {
+    padding: 40px 20px;
+  }
+
+  .vantagens-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .perguntas {
+    padding: 40px 15px;
+  }
+
+  .perguntas h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .pergunta-header {
+    font-size: 0.875rem;
+    padding: 12px;
+  }
+
+  .perguntas dd {
+    font-size: 0.875rem;
+    padding: 0 12px 12px;
+  }
+
+  .Button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Melhorias de usabilidade para touch */
+@media (hover: none) {
+  .pergunta-header {
+    padding: 20px;
+    min-height: 60px;
+  }
+
+  .seta {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
   }
 }

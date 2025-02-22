@@ -76,7 +76,6 @@
   gap: 32px;
   padding-left: 28px;
 }
-
 .lojas-container {
   box-sizing: border-box;
   max-width: 1200px;
@@ -84,16 +83,18 @@
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 20px;
   padding-top: 0px;
   padding-bottom: 140px;
 }
 
 .lojas-container h2 {
-  grid-column: 1/-1;
   margin-bottom: 60px;
+}
+
+.lojas-items-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
 }
 
 .lojas-container img {
@@ -159,7 +160,6 @@
   }
 
   .lojas-container {
-    gap: 20px;
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -174,7 +174,8 @@
 }
 
 @media (max-width: 600px) {
-  .lojas-container {
+  .lojas-items-container {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

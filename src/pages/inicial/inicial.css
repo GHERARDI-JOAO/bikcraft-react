@@ -454,6 +454,131 @@
   .depoimento img {
     max-height: 200px;
   }
+
+  .introducao-conteudo {
+    padding: 20px;
+  }
+
+  .bicicletas-lista ul {
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .bicicletas-lista li {
+    min-width: 260px;
+  }
+
+  .seguros-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tecnologia-vantagens {
+    gap: 20px;
+  }
+
+  .parceiros ul {
+    grid-template-columns: 1fr;
+  }
+
+  .parceiros li:nth-child(n + 2) {
+    border-top: 2px solid var(--cor-2);
+  }
+
+  .parceiros li:nth-child(odd) {
+    border-left: 2px solid var(--cor-2);
+  }
+
+  .depoimento img {
+    max-height: 150px;
+  }
+
+  .depoimento-conteudo {
+    padding: 20px;
+  }
+
+  .depoimento p {
+    font-size: 1.2rem;
+  }
+
+  .depoimento p::before,
+  .depoimento p::after {
+    font-size: 3rem;
+  }
+
+  .depoimento p::before {
+    left: -30px;
+    top: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .introducao h1 {
+    font-size: 24px;
+  }
+
+  .introducao p {
+    font-size: 16px;
+  }
+
+  .bicicletas-lista h2 {
+    font-size: 2rem;
+  }
+
+  .bicicletas-lista li {
+    min-width: 220px;
+  }
+
+  .bicicletas-lista h3 {
+    font-size: 1.2rem;
+  }
+
+  .bicicletas-lista img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .seguros-item {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .seguros-item span {
+    grid-column: 1;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .seguros-item ul {
+    margin-bottom: 20px;
+  }
+
+  .tecnologia-conteudo {
+    padding: 30px 15px;
+  }
+
+  .tecnologia-vantagens div {
+    padding: 15px;
+  }
+
+  .Button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+/* Melhorias de usabilidade para touch */
+@media (hover: none) {
+  .bicicletas-lista a {
+    padding: 15px;
+  }
+
+  .Button {
+    min-width: 120px;
+    padding: 15px 30px;
+  }
 }
 
 @media (max-width: 600px) {

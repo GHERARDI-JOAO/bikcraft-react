@@ -21,7 +21,7 @@ function Footer() {
               <a href="mailto:contato@bikcraft.com">contato@bikcraft.com</a>
             </li>
             <li>Rua Ali Perto, 42 - Atlético</li>
-            <li>Belo Horizonte - MG</li>
+            <li>Rio de Janeiro - RJ</li>
           </ul>
           <div className="footer-redes">
             <a href="./">
