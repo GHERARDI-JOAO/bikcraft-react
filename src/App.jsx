@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-// Import your pages
+// Importando as páginas
 import Inicial from "./pages/inicial/Inicial";
 import Termos from "./pages/Termos/Termos";
 import Bicicletas from "./pages/Bicicletas/Bicicletas";
@@ -13,7 +13,7 @@ import Magic from "./pages/Magic/Magic";
 import Contato from "./pages/Contato/Contato";
 import Orcamento from "./pages/Orcamento/Orcamento";
 
-// Create a separate component for the routes to use useLocation
+// Componente separado para usar useLocation corretamente
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -34,12 +34,12 @@ const AnimatedRoutes = () => {
   );
 };
 
-// Main App component
+// Componente principal do App
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AnimatedRoutes />
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
