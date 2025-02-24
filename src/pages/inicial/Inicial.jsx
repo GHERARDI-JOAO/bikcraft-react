@@ -236,7 +236,7 @@ function Inicial() {
                 todos que amo.
               </p>
             </blockquote>
-            <span className="font-1-m-b cor-p4">Larissa Marques</span>
+            <span className="font-1-m-b cor-p4">Larissa Marques Gherardi</span>
           </motion.div>
         </section>
 
