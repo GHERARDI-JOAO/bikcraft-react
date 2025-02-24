@@ -50,7 +50,7 @@ function Footer() {
                 <Link to="/contato">Contatos</Link>
               </li>
               <li>
-                <Link to="/termos">Termos e Concições</Link>
+                <Link to="/termos">Termos e Condições</Link>
               </li>
             </ul>
           </nav>
