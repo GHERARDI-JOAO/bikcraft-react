@@ -7,7 +7,7 @@
 
 ## Demonstração
 
-Acesse o projeto em produção: [https://gherardi-joao.github.io/bikcraft-react/](https://gherardi-joao.github.io/bikcraft-react/)
+Acesse o projeto em produção: [https://gherardijoao.github.io/bikcraft-react/](https://gherardijoao.github.io/bikcraft-react/)
 
 ## Sobre o Projeto
 
